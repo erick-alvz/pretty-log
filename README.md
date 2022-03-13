@@ -8,6 +8,28 @@ If you have any suggestions, please let me know.
 ```groovy
 implementation 'com.github.erick-alvz:pretty-log:1.0.0'
 ```
+
+```groovy
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+AndroidStudio 2021.1.1
+
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+```
 Initialize
 ```kotlin
 val log = PrettyLog.Builder()
